@@ -1,0 +1,230 @@
+/* Fernandio Farrel Putra Susilo NRP 5026221102 */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap");
+
+html{
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2a3235;
+  color: rgb(240, 240, 240);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  max-width: calc(788px);
+  display: grid;
+  width: 100%;
+  right: 0px;
+  grid-template-columns: 1fr auto 1fr;
+  border: 1px solid transparent;
+  border-radius: 72px;
+  background-color: transparent;
+  position: fixed;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 12px;
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+}
+
+.nyx_more-top {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(240, 240, 240);
+  color: black;
+  justify-self: end;
+}
+
+.nyx_more-top svg {
+  margin-left: 12px;
+  margin-top: 12px;
+  color: rgb(0, 0, 0);
+}
+
+.nyx_page {
+  min-height: 81dvh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0px;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.nyx_container-out {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 64px 16px 64px 16px;
+  height: 1073px;
+  width: 793;
+}
+
+.nyx_container {
+  margin: 0px auto;
+  height: 100%;
+  width: 100%;
+  max-width: 680px;
+}
+
+.nyx_title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.nyx_subtitle {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 4px;
+}
+
+.nyx_header {
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  position: absolute;
+}
+
+h1 {
+  margin-bottom: 0px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+h2 {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.nyx_content {
+  margin-top: 32px;
+  height: 100%;
+  width: 100%;
+  max-width: 680px;
+}
+
+.nyx_button-out {
+  position: relative;
+}
+
+.nyx_button-style {
+  z-index: 0;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(42, 50, 53);
+  transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
+  border-radius: 14px;
+  position: relative;
+  height: auto;
+}
+
+.nyx_button {
+  hyphens: auto;
+  white-space: normal;
+  background: none;
+  color: inherit;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding-left: 44px;
+  padding-right: 44px;
+  min-height: 56px;
+  margin: 0px;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: space-between;
+  height: auto;
+  position: relative;
+  padding: 8px 8px;
+  width: 100%;
+  appearance: none;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.nyx_blank {
+  height: 40px;
+  width: 40px;
+}
+
+p {
+  position: relative;
+  hyphens: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.5;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nyx_more-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(240, 240, 240);
+  color: black;
+  visibility: hidden;
+}
+
+.nyx_more-button svg {
+  margin-top: 12px;
+  color: rgb(0, 0, 0);
+}
+
+.nyx_button-style:hover {
+  transition: cubic-bezier(0.08, 0.59, 0.29, 0.99) 0.1s;
+  transform: scale(1.02);
+}
+
+.nyx_button-style:hover .nyx_more-button {
+  visibility: visible;
+}
+
+footer {
+  text-align: center;
+}
+
+h6 {
+  margin: 2px;
+}

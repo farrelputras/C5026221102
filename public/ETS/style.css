@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
+
+/* color palette */
+.test{
+    color: #573F3B;
+    color: #FFE709;
+    color: #FAF9F6;
+    color: #965b14;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #FAF9F6;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #37423b;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #af928e;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #FAF9F6;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #573F3B;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+  /**
+* Get Started Button 
+*/
+.navbar .get-started-btn {
+  margin-left: 22px;
+  background: #573F3B;
+  color: #FAF9F6;
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.navbar .get-started-btn:hover {
+  background: #af928e;
+  color: #FAF9F6;
+}
+
+@media (max-width: 768px) {
+  .get-started-btn {
+    margin: 0 15px 0 0;
+    padding: 6px 18px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 80vh;
+  background: url("assets/IMG_1819.jpg") center;
+  background-size: cover;
+  position: relative;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .container {
+  padding-top: 72px;
+}
+
+@media (max-width: 992px) {
+  #hero .container {
+    padding-top: 62px;
+  }
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  color: #FAF9F6;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#hero h2 {
+  color: #FAF9F6;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+#hero .btn-get-started {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 35px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  border: 2px solid #FAF9F6;
+  color: #FAF9F6;
+}
+
+#hero .btn-get-started:hover {
+  background: #af928e;
+  border: 2px solid #af928e;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 100vh;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+# Visi Misi
+--------------------------------------------------------------*/
+.visi-misi{
+  background-color: #573F3B;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.visi-misi h1{
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  color: #FAF9F6;
+  margin-bottom: 25px;
+}
+
+.visi-misi .flip-card h3 {  
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.visi-misi .flip-card p {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.visi-misi .flip-card q {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  text-align: left;
+}
+
+.visi-misi .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.visi-misi .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.visi-misi .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.visi-misi .flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.visi-misi .flip-card-front {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #af928e;
+  color: #FAF9F6;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visi-misi .flip-card-back {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #fff597;
+  color: black;
+  padding-left: 25px;
+  padding-right: 25px;
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+.borderc {
+  border-radius: 20px;
+}
+
+/*--------------------------------------------------------------
+#Coming Soon
+--------------------------------------------------------------*/
+.cs {
+  background: #FAF9F6;
+}
+
+.cs .comsoon{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/malgen.JPG") center center;
+  background-size: cover;
+  padding: 40px 60px;
+  margin: 10px 0px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.cs h3 {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #FAF9F6;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.cs h1{
+  font-family: 'Nunito Sans', sans-serif;
+  color: black;
+  font-weight: 700;
+}
+
+.cs p {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #FAF9F6;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.cs .cs-btn {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid black;
+  color: black;
+}
+
+.cs .cs-btn:hover {
+  color: #FAF9F6;
+  background: #573F3B;
+  border-color: #573F3B;
+}
+
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery{
+  background: #573F3B;
+  color: #FAF9F6;
+}
+
+.gallery .grid{
+padding: 0 0 0 0;
+}
+
+.gallery .gallery-item {
+  overflow: hidden;
+}
+
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery .gallerym{
+  margin-top: 25px;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info {
+  width: 100%;
+  background: #fff;
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #573F3B;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #af928e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2c4964;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #4b7dab;
+}
+
+.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #573F3B;
+  color: #fff;
+}
+
+.contact .warning{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
