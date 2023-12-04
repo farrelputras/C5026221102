@@ -15,7 +15,7 @@
 
     <div class="container">
         <header>
-            <h2>Blog Bryan Michael</h2>
+            <h2>Blog Fernandio Farrel</h2>
             <nav>
                 <a href="/blog">Home</a>
                 <a href="/blog/tentang">TENTANG</a>
