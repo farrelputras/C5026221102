@@ -100,3 +100,13 @@ Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 Route::get('/latsoal15','App\Http\Controllers\LatSoal15Controller@index');
 Route::get('/latsoal15/latsoal15_tambah','App\Http\Controllers\LatSoal15Controller@tambah');
 Route::post('/latsoal15/latsoal15_store','App\Http\Controllers\Latsoal15Controller@store');
+
+//route hewan
+Route::get('/hewan','App\Http\Controllers\HewanController@index');
+Route::get('/hewan/tambah','App\Http\Controllers\HewanController@tambah');
+Route::post('/hewan/store','App\Http\Controllers\HewanController@store');
+Route::get('/hewan/edit/{kode}','App\Http\Controllers\HewanController@edit');
+Route::post('/hewan/update','App\Http\Controllers\HewanController@update');
+Route::get('/hewan/hapus/{kode}','App\Http\Controllers\HewanController@hapus');
+Route::get('/hewan/cari','App\Http\Controllers\HewanController@cari');
+Route::get('/hewan/view/{kode}','App\Http\Controllers\HewanController@view');
