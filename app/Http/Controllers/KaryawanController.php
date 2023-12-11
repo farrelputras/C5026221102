@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\View\View;
+use Illuminate\Validation\Rule;
 
 class KaryawanController extends Controller
 {
@@ -30,32 +30,33 @@ class KaryawanController extends Controller
 	// method untuk insert data ke table karyawan
 	public function store(Request $request)
 	{
-        //beri variabel untuk wadah data
-        $kode1 = 0;
+        // //beri variabel untuk wadah data
+        // $kode1 = 0;
 
-        //cari data di database
-        $kode2 = $request->kode;
-        if (DB::table('karyawan')->where('kodepegawai', $kode2)->get()) {
-            $kode1 = $kode2;
-        }
+        // //cari data di database
+        // $kode2 = $request->kode;
+        // if (DB::table('karyawan')->where('kodepegawai', $kode2)->get()) {
+        //     $kode1 = $kode2;
+        // }
 
-        //cek double data
-        if($kode1 == $kode2){
-            //beri warning message
-            // session()->flash('duplikasi-kodepegawai','Kode Pegawai sudah ada, Masukkan Kode lainnya');
-            return redirect('/karyawan/tambah')->with(['dupe' => 'Kode Pegawai sudah ada, Masukkan Kode lainnya']);
-        } else {
-            //insert data ke tabel
-            DB::table('karyawan')->insert([
-                'kodepegawai' => $request->kode,
-                'namalengkap' => $request->nama,
-                'divisi' => $request->divisi,
-                'departemen' => $request->departemen
-            ]);
+        $request->validate([
+            'kodepegawai' => Rule::unique('karyawan', 'kodepegawai'),
+            'namalengkap' => 'required',
+            'divisi' => 'required',
+            'departemen' => 'required',
+        ]);
+
+        //insert data ke tabel
+        DB::table('karyawan')->insert([
+        'kodepegawai' => $request->kode,
+        'namalengkap' => $request->nama,
+        'divisi' => $request->divisi,
+        'departemen' => $request->departemen
+        ]);
 
             // alihkan halaman ke halaman karyawan
             return redirect('/karyawan');
-        }
+
 	}
 
 	// method untuk hapus data karyawan

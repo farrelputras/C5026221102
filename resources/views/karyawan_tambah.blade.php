@@ -10,10 +10,10 @@
 	<br/>
 
 	<form action="/karyawan/store" method="post">
-        @if ($message = Session::get('dupe'))
+        @if ($errors->any())
         <div class="alert alert-danger alert-block">
             <button type="button" class="close" data-dismiss="alert">×</button>
-            <strong>{{ $message }}</strong>
+            <strong>Kode Pegawai sudah ada, Masukkan Kode lainnya</strong>
         </div>
       @endif
 
