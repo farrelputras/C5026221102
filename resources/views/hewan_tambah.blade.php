@@ -30,7 +30,7 @@
         <div class = "form-group row">
             <label for = "ketersediaan" class = "col-sm-2 control-label">Ketersediaan</label>
             <div class = "col-sm-8">
-                <input name="ketersediaan" type = "text" class = "form-control" id = "ketersediaan" placeholder = "Masukkan Ketersediaan">
+                <input name="ketersediaan" type = "text" class = "form-control" id = "ketersediaan" placeholder = "Masukkan Ketersediaan (V / -)">
             </div>
         </div>
 

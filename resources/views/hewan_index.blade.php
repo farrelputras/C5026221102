@@ -5,31 +5,48 @@
 	{{-- <h2>www.malasngoding.com</h2> --}}
 	<h3>Data Hewan</h3>
 
-	<a href="/hewan/tambah" class="btn btn-primary"> + Tambah Hewan Baru</a>
+	<a href="/hewan/tambah" class="btn btn-primary mb-3 mt-2"> + Tambah Hewan Baru</a>
 
 	<br/>
     <p>Cari Data Hewan :</p>
-    <form action="/hewan/cari" method="GET">
-        <input class= "form-control" type="text" name="cari" placeholder="Cari Nama Hewan .."
+    <form action="/hewan/cari" method="GET" class="mb-3">
+        <div class="input-group">
+            <input class= "form-control" type="text" name="cari" placeholder="Cari Nama Hewan .."
             value="{{ old('cari', isset($cari) ? $cari : '') }}">
-        <input class = "btn btn-info" type="submit" value="CARI">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="submit">CARI</button>
+            </div>
+        </div>
     </form>
 	<br/>
 
 	<table class="table table-striped table-hover">
-		<tr>
-			<th class="text-center">Kode</th>
-			<th class="text-center">Nama</th>
-			<th class="text-center">Jumlah</th>
-			<th class="text-center">Ketersediaan</th>
-			<th class="text-center">Opsi</th>
+		<tr style="text-align: center">
+			<th>Kode</th>
+			<th>Nama</th>
+			<th>Jumlah</th>
+			<th>Ketersediaan</th>
+			<th>Opsi</th>
 		</tr>
 		@foreach($hewan as $p)
 		<tr>
 			<td align="center">{{ $p->kodehewan }}</td>
 			<td>{{ $p->namahewan }}</td>
 			<td align="center">{{ $p->jumlahhewan }}</td>
-            <td align="center">{{ $p->tersedia }}</td>
+            <td align="center">
+                {{-- <div class="custom-checkbox"
+                    style="border: 2px solid {{ $p->tersedia == 'T' ? 'green' : 'red' }}; border-radius: 10px">
+                    <label for="customCheckbox {{$p->kodehewan}}"
+                        style="color: {{$p->tersedia == 'T' ? 'green' : 'red' }};">
+                        {{ $p->tersedia == 'T' ? 'T' : 'F' }}
+                    </label>
+                    <input type="checkbox" {{$p->tersedia == 'T' ? 'checked' : '' }} disabled
+                        id="customCheckbox{{$p->kodehewan}}">
+                    <label for="customCheckbox {{ $p->kodehewan }}">
+
+                    </label>
+                </div> --}}
+                {{ $p->tersedia }}</td>
 
 			{{-- <td>
                 @if ($p->jumlahhewan > 0)
